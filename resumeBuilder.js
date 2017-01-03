@@ -171,7 +171,7 @@ projects.display();
 
 education.display = function() {
   if(education.schools.length > 0 || education.onlineCourses.length > 0) {
-    for(i in education.schools) {
+    for(var i in education.schools) {
       $("#education").append(HTMLschoolStart);
 
       var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[i].name).replace("#", education.schools[i].url);
@@ -190,7 +190,7 @@ education.display = function() {
 
     if(education.onlineCourses.length > 0) {
       $("#education").append(HTMLonlineClasses);
-      for(i in education.onlineCourses) {
+      for(var i in education.onlineCourses) {
         $("#education").append(HTMLschoolStart);
         var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title).replace("#", education.onlineCourses[i].url);
 				var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
@@ -203,6 +203,6 @@ education.display = function() {
       }
     }
   }
-}
+};
 
 $("#mapDiv").append(googleMap);
