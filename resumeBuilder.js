@@ -8,7 +8,7 @@ var bio = {
     },
     "picture": "images/profile.png",
     "welcomeMessage": "Hello! Thanks for viewing my page! I am a network design enginner and an entry level front-end developer.",
-    "skills": ["Project Management", "RAN Engineering", "Process Development" "Java", "Python", "Software Development"]
+    "skills": ["Project Management", "RAN Engineering", "Process Development", "Java", "Python", "Software Development"]
 };
 
 var work = {
@@ -55,8 +55,7 @@ var education = {
     "major": "Electrical Engineering",
     "url": "www.kennesaw.edu"
   }
-]
-},
+],
 "onlineCourses": [
   { "school": "Udacity",
   "title": "Introduction to Programming",
@@ -123,7 +122,7 @@ for(i in formattedContactInfo) {
   $("#topContacts").append(formattedContactInfo[i]);
   $("#footerContacts").append(formattedContactInfo[i]);
 }
-
+}
 function displayWork() {
   if(work.jobs.length > 0) {
     $("#workExperience").append(HTMLworkStart);
@@ -164,9 +163,10 @@ projects.display = function() {
         var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images[img]);
         $(".project-entry:last").append(formattedProjectImage);
       }
+
     }
   }
-}
+};
 
 projects.display();
 
