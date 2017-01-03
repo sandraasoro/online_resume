@@ -101,7 +101,7 @@ var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
 var formattedContactInfo = [];
 formattedContactInfo.push(HTMLemail.replace("%data%", bio.contacts.email));
 formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.github));
-formattedContactInfo.push(HTMLtwitter.replace("%data%", bio.contacts.twitter));
+//formattedContactInfo.push(HTMLtwitter.replace("%data%", bio.contacts.twitter));
 formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
 
 
@@ -122,7 +122,6 @@ for(i in formattedContactInfo) {
   $("#topContacts").append(formattedContactInfo[i]);
   $("#footerContacts").append(formattedContactInfo[i]);
 }
-}
 function displayWork() {
   if(work.jobs.length > 0) {
     $("#workExperience").append(HTMLworkStart);
@@ -132,7 +131,7 @@ function displayWork() {
 			var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[i].title);
 			var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[i].location);
 			var formattedDatesWorked = HTMLworkDates.replace("%data%", work.jobs[i].datesWorked);
-			var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[i].description);]
+			var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[i].description);
 
       var formattedEmployerWorkTitle = formattedEmployer + formattedWorkTitle;
 
