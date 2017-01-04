@@ -49,18 +49,18 @@ var work = {
 var education = {
   "schools": [
     { "name": "Southern Polytechnic State University",
-    "datesAttended": "2008-2013",
-    "location": "Marietta, GA, USA",
-    "degree": "B.S. Electrical Engineering",
-    "major": "Electrical Engineering",
-    "url": "www.kennesaw.edu"
-  }
-],
+      "datesAttended": "2008-2013",
+      "location": "Marietta, GA, USA",
+      "degree": "B.S. Electrical Engineering",
+      "major": "Electrical Engineering",
+      "url": "www.kennesaw.edu"
+    }
+  ],
   "onlineCourses": [
     { "school": "Udacity",
-    "title": "Introduction to Programming",
-    "completed": "December 2016",
-    "url": "https://www.udacity.com"
+      "title": "Introduction to Programming",
+      "completed": "December 2016",
+      "url": "https://www.udacity.com"
     }
   ]
 };
@@ -101,7 +101,6 @@ var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
 var formattedContactInfo = [];
 formattedContactInfo.push(HTMLemail.replace("%data%", bio.contacts.email));
 formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.github));
-//formattedContactInfo.push(HTMLtwitter.replace("%data%", bio.contacts.twitter));
 formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
 
 
@@ -203,5 +202,6 @@ education.display = function() {
 
   }
 };
+education.display();
 
 $("#mapDiv").append(googleMap);
