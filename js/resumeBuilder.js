@@ -8,7 +8,9 @@ var bio = {
 	},
 	"picture": "images/profile.png",
 	"welcomeMessage": "Hello! Thanks for viewing my page! I am a network design engineer and an entry level front-end developer.",
-	"skills": ["Project Management", "RAN Engineering", "Process Development", "Java", "Python", "Software Development"]
+	"skills": ["Project Management", "RAN Engineering", "Process Development", "Java", "Python", "Software Development"],
+  "display" : function(){
+  }
 };
 var work = {
 	"jobs": [{
@@ -28,7 +30,9 @@ var work = {
 		"title": "System Analyst- Intern",
 		"location": "Atlanta, GA, USA",
 		"datesWorked": "May 2011-August 2011",
-		"description": "Led intern group to work directly with merchants to understand the various" + "InComm products by engaging them in training sessions and developing job aid documents." + "Worked on technical document for B2B OpenLoop Project which explained to customers the" + "main advantage of investing in open loop gift cards such as Visa."
+		"description": "Led intern group to work directly with merchants to understand the various" + "InComm products by engaging them in training sessions and developing job aid documents." + "Worked on technical document for B2B OpenLoop Project which explained to customers the" + "main advantage of investing in open loop gift cards such as Visa.",
+    "display" : function(){
+    }
 	}]
 };
 var education = {
@@ -68,6 +72,7 @@ var projects = {
 		"url": "https://github.com/sandraasoro/create_a_movie_website"
 	}]
 };
+
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 var formattedBioPic = HTMLbioPic.replace("%data%", bio.picture);
@@ -80,6 +85,7 @@ $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 $("#header").append(formattedBioPic);
 $("#header").append(formattedWelcomeMsg);
+
 if (bio.skills.length > 0) {
 	$("#header").append(HTMLskillsStart);
 	for (var i = 0; i < bio.skills.length; i++) {
