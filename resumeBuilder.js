@@ -56,13 +56,13 @@ var education = {
     "url": "www.kennesaw.edu"
   }
 ],
-"onlineCourses": [
-  { "school": "Udacity",
-  "title": "Introduction to Programming",
-  "completed": "December 2016",
-  "url": "https://www.udacity.com"
-}
-]
+  "onlineCourses": [
+    { "school": "Udacity",
+    "title": "Introduction to Programming",
+    "completed": "December 2016",
+    "url": "https://www.udacity.com"
+    }
+  ]
 };
 
 var projects = {
@@ -113,12 +113,12 @@ $("#header").append(formattedWelcomeMsg);
 if(bio.skills.length > 0) {
   $("#header").append(HTMLskillsStart);
 
-  for(i in bio.skills) {
+  for(var i in bio.skills) {
     $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
   }
 }
 
-for(i in formattedContactInfo) {
+for(var i in formattedContactInfo) {
   $("#topContacts").append(formattedContactInfo[i]);
   $("#footerContacts").append(formattedContactInfo[i]);
 }
@@ -126,7 +126,7 @@ function displayWork() {
   if(work.jobs.length > 0) {
     $("#workExperience").append(HTMLworkStart);
 
-    for(i in work.jobs) {
+    for(var i in work.jobs) {
       var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[i].employer);
 			var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[i].title);
 			var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[i].location);
@@ -147,7 +147,7 @@ displayWork();
 
 projects.display = function() {
   if(projects.projects.length > 0) {
-    for(i in projects.projects) {
+    for(var i in projects.projects) {
       $("#projects").append(HTMLprojectStart);
 
 			var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title).replace("#", projects.projects[i].url);
@@ -158,7 +158,7 @@ projects.display = function() {
 			$(".project-entry:last").append(formattedProjectDates);
 			$(".project-entry:last").append(formattedProjectDescription);
 
-			for(img in projects.projects[i].images) {
+			for(var img in projects.projects[i].images) {
         var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images[img]);
         $(".project-entry:last").append(formattedProjectImage);
       }
@@ -202,6 +202,7 @@ education.display = function() {
 				$(".education-entry:last").append(formattedOnlineURL);
       }
     }
+
   }
 };
 
