@@ -75,6 +75,7 @@ var projects = {
 	}]
 };
 
+bio.display = function() {
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
@@ -99,8 +100,10 @@ for (var i = 0; i < formattedContactInfo.length; i++) {
 	$("#topContacts").append(formattedContactInfo[i]);
 	$("#footerContacts").append(formattedContactInfo[i]);
 }
+};
+bio.display();
 
-function displayWork() {
+work.display = function(){
 	if (work.jobs.length > 0 || work.jobs.length > 0) {
 		$("#workExperience").append(HTMLworkStart);
 		for (var i = 0; i < work.jobs.length; i++) {
@@ -117,7 +120,7 @@ function displayWork() {
 		}
 	}
 }
-displayWork();
+work.display();
 projects.display = function() {
 	if (projects.projects.length > 0 || projects.projects.length > 0) {
 		for (var i = 0; i < projects.projects.length; i++) {
