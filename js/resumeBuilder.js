@@ -7,7 +7,7 @@ var bio = {
 		"github": "sandraasoro",
 		"location": "Atlanta, GA, USA"
 	},
-	"bioPic": "images/profile.png",
+	"biopic": "images/profile.png",
 	"welcomeMessage": "Hello! Thanks for viewing my page! I am a network design engineer and an entry level front-end developer.",
 	"skills": ["Project Management", "RAN Engineering", "Process Development", "Java", "Python", "Software Development"],
   "display" : function(){
@@ -40,11 +40,11 @@ var work = {
 var education = {
 	"schools": [{
 		"name": "Southern Polytechnic State University",
-		"datesAttended": "2008-2013",
+		"dates": "2008-2013",
 		"location": "Marietta, GA, USA",
 		"degree": "B.S. Electrical Engineering",
 		"majors": "Electrical Engineering",
-		"url": "www.kennesaw.edu"
+		"url": "https://www.kennesaw.edu"
 	}],
 	"onlineCourses": [{
 		"school": "Udacity",
@@ -77,7 +77,7 @@ var projects = {
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
 var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
 var formattedContactInfo = [];
 formattedContactInfo.push(HTMLmobile.replace("%data%", bio.contacts.mobile));
