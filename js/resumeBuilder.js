@@ -40,7 +40,7 @@ var education = {
 		"dates": "2008-2013",
 		"location": "Marietta, GA, USA",
 		"degree": "B.S. Electrical Engineering",
-		"majors": "Electrical Engineering",
+		"majors": ["Electrical Engineering"],
 		"url": "https://www.kennesaw.edu"
 	}],
 	"onlineCourses": [{
@@ -91,9 +91,9 @@ bio.display = function() {
 			$("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
 		}
 	}
-	for (var i = 0; i < formattedContactInfo.length; i++) {
-		$("#topContacts").append(formattedContactInfo[i]);
-		$("#footerContacts").append(formattedContactInfo[i]);
+	for (var j = 0; j < formattedContactInfo.length; j++) {
+		$("#topContacts").append(formattedContactInfo[j]);
+		$("#footerContacts").append(formattedContactInfo[j]);
 	}
 };
 bio.display();
