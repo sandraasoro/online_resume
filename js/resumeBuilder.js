@@ -2,16 +2,15 @@ var bio = {
 	"name": "Sandra Asoro",
 	"role": "Network Design Enginner & Entry- Level Front-End Developer",
 	"contacts": {
-    "mobile": "678-488-5903",
-    "email": "sandraasoro@gmail.com",
+		"mobile": "678-488-5903",
+		"email": "sandraasoro@gmail.com",
 		"github": "sandraasoro",
 		"location": "Atlanta, GA, USA"
 	},
 	"biopic": "images/profile.png",
 	"welcomeMessage": "Hello! Thanks for viewing my page! I am a network design engineer and an entry level front-end developer.",
 	"skills": ["Project Management", "RAN Engineering", "Process Development", "Java", "Python", "Software Development"],
-  "display" : function(){
-  }
+	"display": function() {}
 };
 var work = {
 	"jobs": [{
@@ -29,12 +28,10 @@ var work = {
 	}, {
 		"employer": "InComm",
 		"title": "System Analyst- Intern",
-
 		"location": "Atlanta, GA, USA",
 		"dates": "May 2011-August 2011",
 		"description": "Led intern group to work directly with merchants to understand the various" + "InComm products by engaging them in training sessions and developing job aid documents." + "Worked on technical document for B2B OpenLoop Project which explained to customers the" + "main advantage of investing in open loop gift cards such as Visa.",
-    "display" : function(){
-    }
+		"display": function() {}
 	}]
 };
 var education = {
@@ -74,36 +71,33 @@ var projects = {
 		"url": "https://github.com/sandraasoro/create_a_movie_website"
 	}]
 };
-
 bio.display = function() {
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
-var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
-var formattedContactInfo = [];
-formattedContactInfo.push(HTMLmobile.replace("%data%", bio.contacts.mobile));
-formattedContactInfo.push(HTMLemail.replace("%data%", bio.contacts.email));
-formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.github));
-formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-$("#header").append(formattedBioPic);
-$("#header").append(formattedWelcomeMsg);
-
-if (bio.skills.length > 0) {
-	$("#header").append(HTMLskillsStart);
-	for (var i = 0; i < bio.skills.length; i++) {
-		$("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
+	var formattedName = HTMLheaderName.replace("%data%", bio.name);
+	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+	var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+	var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
+	var formattedContactInfo = [];
+	formattedContactInfo.push(HTMLmobile.replace("%data%", bio.contacts.mobile));
+	formattedContactInfo.push(HTMLemail.replace("%data%", bio.contacts.email));
+	formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.github));
+	formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
+	$("#header").prepend(formattedRole);
+	$("#header").prepend(formattedName);
+	$("#header").append(formattedBioPic);
+	$("#header").append(formattedWelcomeMsg);
+	if (bio.skills.length > 0) {
+		$("#header").append(HTMLskillsStart);
+		for (var i = 0; i < bio.skills.length; i++) {
+			$("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
+		}
 	}
-}
-for (var i = 0; i < formattedContactInfo.length; i++) {
-	$("#topContacts").append(formattedContactInfo[i]);
-	$("#footerContacts").append(formattedContactInfo[i]);
-}
+	for (var i = 0; i < formattedContactInfo.length; i++) {
+		$("#topContacts").append(formattedContactInfo[i]);
+		$("#footerContacts").append(formattedContactInfo[i]);
+	}
 };
 bio.display();
-
-work.display = function(){
+work.display = function() {
 	if (work.jobs.length > 0 || work.jobs.length > 0) {
 		$("#workExperience").append(HTMLworkStart);
 		for (var i = 0; i < work.jobs.length; i++) {
@@ -171,5 +165,4 @@ education.display = function() {
 	}
 };
 education.display();
-
 $("#mapDiv").append(googleMap);
