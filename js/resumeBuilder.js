@@ -119,7 +119,7 @@ work.display = function(){
 			$(".work-entry:last").append(formattedWorkDescription);
 		}
 	}
-}
+};
 work.display();
 projects.display = function() {
 	if (projects.projects.length > 0 || projects.projects.length > 0) {
